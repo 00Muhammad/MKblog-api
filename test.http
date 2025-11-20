@@ -1,0 +1,12 @@
+### GET all posts
+GET http://localhost:5000/api/posts
+
+### CREATE new post
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+
+{
+  "title": "Тестовый пост",
+  "content": "Это тестовый пост через REST Client",
+  "author": "Тестер"
+}
