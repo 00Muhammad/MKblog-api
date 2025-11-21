@@ -3,15 +3,18 @@
 const PostSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true
+    required: [true, 'Пожалуйста, добавьте название поста'],
+    trim: true,
+    maxlength: [100, 'Название не может быть длиннее 100 символов']
   },
   content: {
     type: String,
-    required: true
+    required: [true, 'Пожалуйста, добавьте содержание поста']
   },
   author: {
     type: String,
-    default: 'Anonymous'
+    default: 'Anonymous',
+    trim: true
   }
 }, {
   timestamps: true

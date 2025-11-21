@@ -2,14 +2,13 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect('mongodb://localhost:27017/blogdb', {
+    await mongoose.connect('mongodb://localhost:27017/blog', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
-  } catch (error) {
-    console.error(error);
+    console.log('MongoDB Connected: localhost');
+  } catch (err) {
+    console.error(err.message);
     process.exit(1);
   }
 };

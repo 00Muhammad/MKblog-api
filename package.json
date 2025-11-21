@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "mkblog-api",
   "version": "1.0.0",
   "description": "REST API для блога с постами и комментариями",
@@ -18,8 +18,9 @@
   "author": "MKblog Team",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^7.0.0"
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^7.8.7"
   },
   "devDependencies": {
     "nodemon": "^3.0.0"
